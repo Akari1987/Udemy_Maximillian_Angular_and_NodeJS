@@ -37,7 +37,7 @@
   "devDependencies": {
     "@ngtools/webpack": "^1.9.8",
     "@types/core-js": "0.9.36",
-    "@types/node": "^6.0.99",
+    "@types/node": "^6.0.100",
     "angular-router-loader": "^0.5.0",
     "angular2-template-loader": "^0.5.0",
     "awesome-typescript-loader": "^3.1.2",
