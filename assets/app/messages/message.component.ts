@@ -21,5 +21,5 @@ import { Message } from './message.model';
     `]
 })
 export class MessageComponent {
-    @Input('inputMessage') message: Message;
+    @Input() message: Message;
 }
