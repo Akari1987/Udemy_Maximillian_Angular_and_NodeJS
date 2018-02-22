@@ -13,7 +13,6 @@ import { MessageService } from "./message.service"
             *ngFor="let message of messages"></app-message>
     </div>
   `,
-  providers: [MessageService]
 })
 
 export class MessageListComponent implements OnInit {
