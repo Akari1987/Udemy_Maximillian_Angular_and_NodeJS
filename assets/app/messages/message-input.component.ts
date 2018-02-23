@@ -1,4 +1,5 @@
 import { Component } from "@angular/core";
+import { NgForm } from "@angular/forms";
 
 import { MessageService } from "./message.service";
 import { Message } from "./message.model";
@@ -11,8 +12,10 @@ import { Message } from "./message.model";
 export class MessageInputComponent {
     constructor(private MessageService: MessageService ) {}
 
-    onSave(value: string) {
-        const message = new Message(value, 'Max');
+    onSubmit(form: NgForm) {
+        console.log(form);
+        const message = new Message(form.value.content, 'Max');
         this.MessageService.addMessage(message);
+        form.resetForm();
     }
 }
