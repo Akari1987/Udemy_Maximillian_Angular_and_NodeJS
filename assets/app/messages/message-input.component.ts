@@ -10,12 +10,16 @@ import { Message } from "./message.model";
 })
 
 export class MessageInputComponent {
-    constructor(private MessageService: MessageService ) {}
+    constructor(private messageService: MessageService ) {}
 
     onSubmit(form: NgForm) {
         console.log(form);
         const message = new Message(form.value.content, 'Max');
-        this.MessageService.addMessage(message);
+        this.messageService.addMessage(message)
+            .subscribe(
+                data => console.log(data),
+                error => console.error(error)
+            );
         form.resetForm();
     }
 }
